@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TechSupply</title>
+
+        <meta charset="UTF-8">
+
+         
+    </head>
+
+    <body>
+        <h1>Techsupply Database</h1> 
+		
+		<h2>Search for Records</h2>
+
+        <label class="title">SELECT all customers</label><br />
+        <button onclick="window.location.href = 'allcustomers.php'">
+            Display all customers
+        </button><br />  
+		
+		<!-- 
+			No need for a SUBMIT button as we are NOT submitting any information
+			
+			We have  TWO submit buttons below, SO WE NEED THREE FORM TAGS as 
+			WE WANT TO GET TO THREE DIFFERENT WEB PAGES
+		-->
+			
+
+        <h3>OR</h3>	
+
+        <label class="title">SELECT one Customer</label>
+        <form action="onecustomer.php" method='post'>
+            <input type='submit' value='Search for customer based on Name' name='searchSomecustomer' />
+            <input type="text" name="Customer_Name" size="40" placeholder = "Enter a customer Name" required />     
+        </form>
+
+        <h3>OR</h3>	
+
+        <label class="title">SELECT some customers</label>
+        <form action="somecustomer.php" method='post'>
+            <input type='submit' value='Search for customer based on address' name='searchSomeaddress' />
+            <input type="text" name="Customer_Address" size="40" placeholder = "Enter an address" required />     
+        </form>
+
+        <h2>Add a new Customer</h2>
+
+        <label class="title">INSERT a New Customer</label><br />
+        <button onclick="window.location.href = 'newcustomer.html'">Add a new customer</button>
+    </body>
+</html>
